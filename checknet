@@ -1,0 +1,8 @@
+IP=$(checkip) 
+
+echo "Your IP address is $IP"
+
+echo "Major Tom, can you hear me? Let's check... " 
+
+ping 8.8.8.8 
+
