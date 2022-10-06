@@ -1,8 +1,10 @@
-IP=$(checkip) 
+#!/bin/bash 
 
-echo "Your IP address is $IP"
-
-echo "Major Tom, can you hear me? Let's check... " 
-
-ping 8.8.8.8 
-
+echo "Can you hear me, major Tom? Let's check ... "
+sleep 1
+IP=$(dig +short www.google.com)
+    if ping 8.8.8.8 -c4; then 
+sleep 1 && echo "I can hear you, sergeant. Your transmission is clear and your IP address is: $IP"
+    else 
+echo "We are losing contact, sergeant. Check your transmission, sir. I cannot hear you"
+fi 
